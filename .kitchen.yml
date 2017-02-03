@@ -15,7 +15,7 @@ driver:
       datacenter: 'Datacenter'
       template_name: 'ubuntu16-template'
       template_folder: 'Linux'
-      host: '172.16.20.3'
+      host: '172.16.20.6'
       num_cpus: 2,
       memory_mb: 4096
       ssh:
