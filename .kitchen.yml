@@ -15,8 +15,8 @@ driver:
       datacenter: 'Datacenter'
       template_name: 'ubuntu16-template'
       template_folder: 'Linux'
-      host: '172.16.20.6'
-      num_cpus: 2,
+      resource_pool: 'Cluster'
+      num_cpus: 2
       memory_mb: 4096
       ssh:
         user: admini
@@ -28,6 +28,9 @@ provisioner:
   name: chef_zero
   sudo_command: sudo
 
+verifier:
+  name: inspec
+
 transport:
   username: "admini"
   password: admini
@@ -38,5 +41,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[vsphere-demo::default]
+      - recipe[vsphere_demo::default]
     attributes:
