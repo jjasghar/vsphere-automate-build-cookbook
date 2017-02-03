@@ -3,8 +3,8 @@ driver:
   name: vsphere
   driver_options:
     host: '172.16.20.2'
-    user: 'admin@vsphere.local'
-    password: 'Cod4can!'
+    user: 'administrator@vsphere.local'
+    password: 'Good2bye!'
     insecure: true
   machine_options:
     start_timeout: 600
