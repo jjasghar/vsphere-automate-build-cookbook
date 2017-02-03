@@ -1,0 +1,42 @@
+---
+driver:
+  name: vsphere
+  driver_options:
+    host: '172.16.20.2'
+    user: 'admin@vsphere.local'
+    password: 'Cod4can!'
+    insecure: true
+  machine_options:
+    start_timeout: 600
+    create_timeout: 600
+    ready_timeout: 90
+    bootstrap_options:
+      use_linked_clone: true
+      datacenter: 'Datacenter'
+      template_name: 'ubuntu16-template'
+      template_folder: 'Linux'
+      host: '172.16.20.3'
+      num_cpus: 2,
+      memory_mb: 4096
+      ssh:
+        user: admini
+        paranoid: false
+        password: admini
+        port: 22
+
+provisioner:
+  name: chef_zero
+  sudo_command: sudo
+
+transport:
+  username: "admini"
+  password: admini
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[vsphere-demo::default]
+    attributes:

@@ -1,0 +1,19 @@
+{
+  "version": "2",
+  "build_cookbook": {
+    "name": "build_cookbook",
+    "path": ".delivery/build_cookbook"
+  },
+  "skip_phases": [
+    "security",
+    "quality",
+    "publish",
+    "unit",
+    "lint",
+    "syntax"
+  ],
+  "job_dispatch": {
+    "version": "v2"
+  },
+  "dependencies": []
+}

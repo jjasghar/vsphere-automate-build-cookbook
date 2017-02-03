@@ -1,0 +1,7 @@
+api_protocol = "https"
+enterprise = "tirefi"
+git_port = "8989"
+organization = "tirefi"
+pipeline = "master"
+server = "chef-automate.tirefi.re"
+user = "jj"
