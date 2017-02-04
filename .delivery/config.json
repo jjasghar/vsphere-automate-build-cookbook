@@ -10,7 +10,8 @@
     "publish",
     "unit",
     "lint",
-    "syntax"
+    "smoke",
+    "fuctional"
   ],
   "job_dispatch": {
     "version": "v2"

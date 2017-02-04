@@ -9,7 +9,7 @@ validation_key           "#{current_dir}/pems/tirefi.re-validator.pem"
 chef_server_url          "https://chef.tirefi.re/organizations/tirefi"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
-cookbook_path ["#{current_dir}/../cookbooks"]
+cookbook_path ["#{current_dir}/../.."]
 cache_path              File.expand_path(File.dirname(__FILE__))
 ssl_verify_mode         :verify_none
 
