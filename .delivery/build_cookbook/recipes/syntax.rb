@@ -10,6 +10,7 @@ if node['delivery']['change']['stage'] == 'acceptance'
     code <<-EOH
   STATUS=0
     chef exec "foodcritic . --exclude spec -f any -t ~supermarket" || STATUS=1
+    chef exec knife vsphere vm delete automate-ubuntu -P -y
     exit $STATUS
   EOH
   end
