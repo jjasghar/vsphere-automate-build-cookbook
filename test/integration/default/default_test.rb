@@ -16,7 +16,7 @@ describe port(80) do
 end
 
 describe file('/var/www/html/index.nginx-debian.html') do
-  its('type') { should eq 'file' }
+  its('type') { should eq :file }
   it { should be_file }
   it { should_not be_directory }
   its('content') { should match (%r{tirefi}) }
