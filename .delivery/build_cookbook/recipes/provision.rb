@@ -15,7 +15,7 @@ if node['delivery']['change']['stage'] == 'acceptance'
   end
 end
 if node['delivery']['change']['stage'] == 'rehearsal'
-  bash "bootstrap a permanent node" do
+  bash "upload the cookbook to the chef server" do
   cwd delivery_workspace_repo
   code <<-EOH
   STATUS=0
