@@ -7,7 +7,6 @@
   "skip_phases": [
     "security",
     "quality",
-    "publish",
     "unit",
     "lint",
     "smoke",
