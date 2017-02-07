@@ -29,7 +29,7 @@ if node['delivery']['change']['stage'] == 'union'
   end
 end
 if node['delivery']['change']['stage'] == 'rehearsal'
-  bash "One last tk run to verify everything" do
+  bash "Delete the acceptance node" do
     cwd delivery_workspace_repo
     code <<-EOH
       STATUS=0
