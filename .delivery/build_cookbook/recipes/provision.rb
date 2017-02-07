@@ -13,7 +13,7 @@ if node['delivery']['change']['stage'] == 'acceptance'
       chef exec knife vsphere vm clone acceptance-automate-ubuntu --template ubuntu16-template \
         -f Linux --bootstrap --cips dhcp --dest-folder / --ssh-user admini \
         --node-ssl-verify-mode none --ssh-password admini \
-        -r 'recipe[vsphere_demo::default]' --environment "#{delivery_environment}" || STATUS=1
+        -r 'recipe[vsphere_demo::default]' || STATUS=1
       exit $STATUS
     EOH
   end
@@ -27,7 +27,7 @@ if node['delivery']['change']['stage'] == 'union'
       chef exec knife vsphere vm clone union-automate-ubuntu --template ubuntu16-template \
         -f Linux --bootstrap --cips dhcp --dest-folder / --ssh-user admini \
         --node-ssl-verify-mode none --ssh-password admini \
-        -r 'recipe[vsphere_demo::default]' --environment "#{delivery_environment}" || STATUS=1
+        -r 'recipe[vsphere_demo::default]' || STATUS=1
       exit $STATUS
     EOH
   end
@@ -41,7 +41,7 @@ if node['delivery']['change']['stage'] == 'rehearsal'
       chef exec knife vsphere vm clone rehearsal-automate-ubuntu --template ubuntu16-template \
         -f Linux --bootstrap --cips dhcp --dest-folder / --ssh-user admini \
         --node-ssl-verify-mode none --ssh-password admini \
-        -r 'recipe[vsphere_demo::default]' --environment "#{delivery_environment}" || STATUS=1
+        -r 'recipe[vsphere_demo::default]' || STATUS=1
       exit $STATUS
     EOH
   end
